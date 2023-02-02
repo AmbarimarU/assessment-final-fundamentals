@@ -84,7 +84,27 @@ return Number(bestScoreMovie)
  *  getAverageIMDBRating(movies);
  *  //> 7.76
  */
-function getAverageIMDBRating() {}
+function getAverageIMDBRating(movies) {
+  
+  // let noMovies = [];
+  
+  // if (movies.length === 0){
+  //   return noMovies
+  // }
+//   let movieArr = [];
+//   let average = 0;
+//   let imdbs = movies.imdbRating;
+
+//   for (let i = 0; i < movies.length; i++){
+// // let a = movieArr
+// // let b = movieArr.length
+//     imdbs = Number(movies[i].imdbRating);
+//     movieArr.push(imdbs);
+//     movieArr.reduce(a,b)
+//     average = a / b;
+//   }
+//   return average
+}
 
 /**
  * countByRating()
@@ -97,7 +117,16 @@ function getAverageIMDBRating() {}
  *  countByRating(movies);
  *  //> { G: 3, PG: 7 }
  */
-function countByRating() {}
+function countByRating(movies) {
+  let ratings = {};
+  if (movies.length === 0){
+    return ratings
+  }
+
+  // for (let i = 0; movies.length; i++){
+  //   if (movies[i].includes(rated))
+  // }
+}
 
 /**
  * findById()
@@ -113,7 +142,26 @@ function countByRating() {}
       // Toy Story 4
     };
  */
-function findById() {}
+function findById(movies, id) {
+  let newObj = {};
+  let notFound = null
+  let movieId = ""
+let movieFound = ''
+  // if (movies.imdbID !== id){
+  //   return notFound
+  // }
+
+  for (let i = 0; i < movies.length; i++){
+if (movies[i].imdbID === id){
+ movieId = movieId[i].imdbID
+ 
+}
+  }
+  if (!movieId){
+    return notFound
+  }
+
+}
 
 /**
  * filterByGenre()
