@@ -38,7 +38,7 @@ return empty
   let findTitles = movies[0].titles
 
   for (let i = 0; i < movies.length; i++){
-    
+
     findTitles = movies[i].title
     titles.push(movies[i].title)
   }
@@ -57,7 +57,21 @@ return empty
  *  getHighestMetascore(movies);
  *  //> 96
  */
-function getHighestMetascore() {}
+function getHighestMetascore(movies) {
+  let noMovies = 0;
+  if (movies.length === 0){
+return noMovies
+  }
+  let bestScoreMovie = movies[0].metascore;
+for (let i = 1; i < movies.length; i++){
+
+  if (bestScoreMovie < movies[i].metascore){
+    bestScoreMovie = movies[i].metascore 
+  }
+  
+}
+return Number(bestScoreMovie)
+}
 
 /**
  * getAverageIMDBRating()
